@@ -22,6 +22,7 @@
 #include <log4cxx/logmanager.h>
 #include <iostream>
 #include <locale.h>
+#include <cstring>
 
 using namespace log4cxx;
 using namespace log4cxx::helpers;
@@ -49,13 +50,13 @@ static void configure(bool err) {
  *
  *    See bug LOGCXX_126.
  *
- *    
+ *
  */
 int main(int argc, char** argv)
 {
     setlocale(LC_ALL, "");
     if (argc <= 1) {
-        puts("Console test program\nUsage: console [-err] [ puts | putws | cout | wcout | configure | log | wide | byte ]*\n");  
+        puts("Console test program\nUsage: console [-err] [ puts | putws | cout | wcout | configure | log | wide | byte ]*\n");
     }
     bool configured = false;
     bool err = false;
